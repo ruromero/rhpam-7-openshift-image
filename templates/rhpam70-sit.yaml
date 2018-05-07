@@ -635,14 +635,20 @@ objects:
             containerPort: 8888
             protocol: TCP
           env:
-          - name: KIE_ADMIN_PWD
-            value: "${KIE_ADMIN_PWD}"
           - name: KIE_ADMIN_USER
             value: "${KIE_ADMIN_USER}"
-          - name: KIE_SERVER_PWD
-            value: "${KIE_SERVER_PWD}"
+          - name: KIE_ADMIN_PWD
+            value: "${KIE_ADMIN_PWD}"
+          - name: KIE_MBEANS
+            value: "${KIE_MBEANS}"
           - name: KIE_SERVER_USER
             value: "${KIE_SERVER_USER}"
+          - name: KIE_SERVER_PWD
+            value: "${KIE_SERVER_PWD}"
+          - name: KIE_SERVER_CONTROLLER_USER
+            value: ${KIE_SERVER_CONTROLLER_USER}
+          - name: KIE_SERVER_CONTROLLER_PWD
+            value: ${KIE_SERVER_CONTROLLER_PWD}
           - name: MAVEN_REPO_URL
             value: "${MAVEN_REPO_URL}"
           - name: MAVEN_REPO_USERNAME
@@ -653,10 +659,6 @@ objects:
             value: "${ADMIN_USERNAME}"
           - name: ADMIN_PASSWORD
             value: "${ADMIN_PASSWORD}"
-          - name: KIE_SERVER_CONTROLLER_PWD
-            value: ${KIE_SERVER_CONTROLLER_PWD}
-          - name: KIE_SERVER_CONTROLLER_USER
-            value: ${KIE_SERVER_CONTROLLER_USER}
           - name: PROBE_IMPL
             value: probe.eap.jolokia.EapProbe
           - name: PROBE_DISABLE_BOOT_ERRORS_CHECK
